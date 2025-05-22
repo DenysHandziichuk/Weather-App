@@ -31,14 +31,13 @@ cityInput.addEventListener('keydown', (e) => {
 });
 
 async function getFetchData(endpoint, city) {
-  const url = `/.netlify/functions/weather?city=${encodeURIComponent(city)}`;
-  const response = await fetch(url);
-  return response.json();
+    const url = `/.netlify/functions/weather?city=${encodeURIComponent(city)}`;
+    const response = await fetch(url);
+    return response.json();
 }
 
-
-async function getFetchDataByCoords(endpoint, lat, lon) {
-    const url = `https://api.openweathermap.org/data/2.5/${endpoint}?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+async function getFetchDataByCoords(lat, lon) {
+    const url = `/.netlify/functions/weather?lat=${lat}&lon=${lon}`;
     const response = await fetch(url);
     return response.json();
 }
@@ -55,7 +54,7 @@ async function updateWeatherInfo(city) {
 }
 
 async function updateWeatherByCoords(lat, lon) {
-    const weatherData = await getFetchDataByCoords('weather', lat, lon);
+    const weatherData = await getFetchDataByCoords(lat, lon);
 
     if (weatherData.cod !== 200) {
         showSection(notFoundSection);
