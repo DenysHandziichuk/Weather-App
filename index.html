@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+<body>
+    <main class="main-container">
+        <header class="input-container">
+            <input type="text" class="city-input" placeholder="Search City" required>
+            <button class="submit-btn">
+                <span class="material-symbols-outlined">
+                search
+                </span>
+            </button>
+        </header>
+        <section class="weather-info"  style="display:none">
+            <div class="location-date-container">
+                <div class="location">
+                    <span class="material-symbols-outlined">location_on</span>
+                    <h4 class="country-txt">Toronto</h4>
+                </div>
+                <h5 class="date-txt regular-txt">Wed, 21 May</h5>
+            </div>
+            <div class="weather-summary-container">
+                <img src="assets/weather/clouds.svg" class="image" alt="atmosphere">
+                <div class="weather-summary-info">
+                    <h4 class="temp-txt">29 °C</h4>
+                    <h5 class="condition-txt regular txt">Clouds</h5>
+                </div>
+            </div>
+            <div class="weather-summary-container">
+                <div class="condition-item">
+                     <img src="assets/icons/medium-humidity.png" id="humidity-icon" class="humidity-icon" alt="humidity">
+                    <div class="condition-info">
+                        <h5 class="regular-txt">Humidity</h5>
+                        <h5 class="humidity-number">61%</h4>
+                    </div>
+                </div>
+
+                <div class="condition-item">
+                    <span class="material-symbols-outlined">
+                        air
+                    </span>
+                    <div class="condition-info">
+                        <h5 class="regular-txt">Wind Speed</h5>
+                        <h5 class="humidity-number">9.2 M/s</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="forecast-items-container">
+                <div class="forecast-item">
+                    <h5 class="forecast-item-date regular-txt">21 May</h5>
+                    <img src="assets/weather/clouds.svg" alt="clouds" class="forecast-item-img">
+                    <h5>29 °C</h5>
+                </div>
+                <div class="forecast-item">
+                    <h5 class="forecast-item-date regular-txt">21 May</h5>
+                    <img src="assets/weather/clouds.svg" alt="clouds" class="forecast-item-img">
+                    <h5>29 °C</h5>
+                </div>
+                <div class="forecast-item">
+                    <h5 class="forecast-item-date regular-txt">21 May</h5>
+                    <img src="assets/weather/clouds.svg" alt="clouds" class="forecast-item-img">
+                    <h5>29 °C</h5>
+                </div>
+                <div class="forecast-item">
+                    <h5 class="forecast-item-date regular-txt">21 May</h5>
+                    <img src="assets/weather/atmosphere.svg" alt="clouds" class="forecast-item-img">
+                    <h5>29 °C</h5>
+                </div>
+                <div class="forecast-item">
+                    <h5 class="forecast-item-date regular-txt">21 May</h5>
+                    <img src="assets/weather/rain.svg" alt="clouds" class="forecast-item-img">
+                    <h5>29 °C</h5>
+                </div>
+                <div class="forecast-item">
+                    <h5 class="forecast-item-date regular-txt">21 May</h5>
+                    <img src="assets/weather/clouds.svg" alt="clouds" class="forecast-item-img">
+                    <h5>29 °C</h5>
+                </div>
+                <div class="forecast-item">
+                    <h5 class="forecast-item-date regular-txt">21 May</h5>
+                    <img src="assets/weather/clouds.svg" alt="clouds" class="forecast-item-img">
+                    <h5>29 °C</h5>
+                </div>
+            </div>
+        </section>
+        <section class="search-city section-message">
+            <img src="assets/message/search-city.png" alt="search-city">
+            <div>
+                <h1>Search City</h1>
+                <h4 class="regular-txt">
+                    Find out the weather condition in the city
+                </h4>
+            </div>
+        </section>
+        <section class="not-found section-message" style="display:none;">
+            <img src="assets/message/not-found.png" alt="not-found">
+            <div>
+                <h1>Search City</h1>
+                <h4 class="regular-txt">
+                    Find out the weather condition in the city
+                </h4>
+            </div>
+        </section>
+        <footer>
+            <a href="https://github.com/DenysHandziichuk" class="github-button">Github</a>
+        </footer>
+    </main>
+</body>
+<script src="main.js" defer></script>
+</html>
