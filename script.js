@@ -43,28 +43,28 @@ async function getFetchDataByCoords(lat, lon) {
 }
 
 async function updateWeatherInfo(city) {
-    const weatherData = await getFetchData('weather', city);
+    const data = await getFetchData('weather', city);
 
-    if (weatherData.cod !== 200) {
+    if (data.current.cod !== 200) {
         showSection(notFoundSection);
         return;
     }
 
-    updateUI(weatherData);
+    updateUI(data.current, data.forecast.daily);
 }
 
 async function updateWeatherByCoords(lat, lon) {
-    const weatherData = await getFetchDataByCoords(lat, lon);
+    const data = await getFetchDataByCoords(lat, lon);
 
-    if (weatherData.cod !== 200) {
+    if (data.current.cod !== 200) {
         showSection(notFoundSection);
         return;
     }
 
-    updateUI(weatherData);
+    updateUI(data.current, data.forecast.daily);
 }
 
-function updateUI(weatherData) {
+function updateUI(weatherData, forecastData) {
     const weatherMain = weatherData.weather[0].main.toLowerCase();
     const weatherIcons = {
         clouds: "clouds.svg",
@@ -91,7 +91,39 @@ function updateUI(weatherData) {
 
     windSpeedElem.textContent = `${weatherData.wind.speed} M/s`;
 
+    updateForecastUI(forecastData);
     showSection(weatherInfoSection);
+}
+
+function updateForecastUI(forecast) {
+    const forecastContainer = document.querySelector('.forecast-items-container');
+    forecastContainer.innerHTML = ''; // clear previous forecast
+
+    const weatherIcons = {
+        clouds: "clouds.svg",
+        clear: "clear.svg",
+        rain: "rain.svg",
+        snow: "snow.svg",
+        thunderstorm: "storm.svg",
+        drizzle: "drizzle.svg",
+        atmosphere: "atmosphere.svg"
+    };
+
+    forecast.slice(1, 8).forEach(day => {
+        const date = new Date(day.dt * 1000);
+        const icon = weatherIcons[day.weather[0].main.toLowerCase()] || "clouds.svg";
+        const temp = Math.round(day.temp.day);
+
+        const forecastHTML = `
+            <div class="forecast-item">
+                <h5 class="forecast-item-date regular-txt">${formatDate(date)}</h5>
+                <img src="assets/weather/${icon}" alt="${day.weather[0].main}" class="forecast-item-img">
+                <h5>${temp} °C</h5>
+            </div>
+        `;
+
+        forecastContainer.insertAdjacentHTML('beforeend', forecastHTML);
+    });
 }
 
 function showSection(sectionToShow) {
