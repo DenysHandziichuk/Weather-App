@@ -1,82 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Weather App</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body>
-    <main class="main-container">
-        <header class="input-container">
-            <input type="text" class="city-input" placeholder="Search City" required>
-            <button class="submit-btn">
-                <span class="material-symbols-outlined">
-                search
-                </span>
-            </button>
-        </header>
-        <section class="weather-info"  style="display:none;">
-            <div class="location-date-container">
-                <div class="location">
-                    <span class="material-symbols-outlined">location_on</span>
-                    <h4 class="country-txt">Toronto</h4>
-                </div>
-                <h5 class="date-txt regular-txt">Wed, 21 May</h5>
-            </div>
-            <div class="weather-summary-container">
-                <img src="assets/weather/clouds.svg" class="image" alt="atmosphere">
-                <div class="weather-summary-info">
-                    <h4 class="temp-txt">29 °C</h4>
-                    <h5 class="condition-txt regular txt">Clouds</h5>
-                </div>
-            </div>
-            <div class="weather-summary-container">
-                <div class="condition-item">
-                     <img src="assets/icons/medium-humidity.png" id="humidity-icon" class="humidity-icon" alt="humidity">
-                    <div class="condition-info">
-                        <h5 class="regular-txt">Humidity</h5>
-                        <h5 class="humidity-number">61%</h4>
-                    </div>
-                </div>
+  <main class="main-container">
+    <header class="input-container">
+      <input type="text" class="city-input" placeholder="Search City" required />
+      <button class="submit-btn" aria-label="Search">
+        <span class="material-symbols-outlined">search</span>
+      </button>
+    </header>
 
-                <div class="condition-item">
-                    <span class="material-symbols-outlined">
-                        air
-                    </span>
-                    <div class="condition-info">
-                        <h5 class="regular-txt">Wind Speed</h5>
-                        <h5 class="humidity-number">9.2 M/s</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="forecast-items-container">
-                
-            </div>
-        </section>
-        <section class="search-city section-message">
-            <img src="assets/message/search-city.png" alt="search-city" class="search-city">
-            <div>
-                <h1>Search City</h1>
-                <h4 class="regular-txt">
-                    Find out the weather condition in the city
-                </h4>
-            </div>
-        </section>
-        <section class="not-found section-message" style="display:none;">
-            <img src="assets/message/not-found.png" alt="not-found" class="not-found">
-            <div>
-                <h1>Search City</h1>
-                <h4 class="regular-txt">
-                    Find out the weather condition in the city
-                </h4>
-            </div>
-        </section>
-        <footer>
-            <a href="https://github.com/DenysHandziichuk" class="github-button">Github</a>
-        </footer>
-    </main>
+    <section class="weather-info" style="display:none;">
+      <div class="location-date-container">
+        <div class="location">
+          <span class="material-symbols-outlined">location_on</span>
+          <h4 class="country-txt"></h4>
+        </div>
+        <h5 class="date-txt regular-txt"></h5>
+      </div>
+
+      <div class="weather-summary-container">
+        <img src="" class="image" alt="weather icon" />
+        <div class="weather-summary-info">
+          <h4 class="temp-txt"></h4>
+          <h5 class="condition-txt regular-txt"></h5>
+        </div>
+      </div>
+
+      <div class="weather-summary-container">
+        <div class="condition-item">
+          <img src="" id="humidity-icon" class="humidity-icon" alt="humidity icon" />
+          <div class="condition-info">
+            <h5 class="regular-txt">Humidity</h5>
+            <h5 class="humidity-number"></h5>
+          </div>
+        </div>
+        <div class="condition-item">
+          <img src="assets/icons/wind.png" alt="wind" class="humidity-icon" />
+          <div class="condition-info">
+            <h5 class="regular-txt">Wind</h5>
+            <h5 class="wind-speed-number"></h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="forecast-items-container"></div>
+    </section>
+
+    <section class="search-city section-message">
+      <img src="assets/message/search-city.png" alt="search-city" />
+      <div>
+        <h1>Search City</h1>
+        <h4 class="regular-txt">Find out the weather condition in the city</h4>
+      </div>
+    </section>
+
+    <section class="not-found section-message" style="display:none;">
+      <img src="assets/message/not-found.png" alt="not-found" />
+      <div>
+        <h1>City Not Found</h1>
+        <h4 class="regular-txt">Please try a different city name</h4>
+      </div>
+    </section>
+
+    <footer>
+      <a href="https://github.com/DenysHandziichuk" class="github-button">Github</a>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
 </body>
-<script src="script.js" defer></script>
 </html>
