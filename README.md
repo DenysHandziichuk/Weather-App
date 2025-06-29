@@ -25,7 +25,7 @@ All powered by the OpenWeather API and deployed with Netlify Functions.
 
 Check out a screenshot of the app in action! 👇
 
-![Preview](preview.png)
+![Preview](assets/preview.png)
 
 ---
 
