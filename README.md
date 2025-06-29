@@ -2,7 +2,7 @@
 
 A simple and beautiful weather app that shows:
 
-- 7-day forecast 📅  
+- 4-day forecast 📅  
 - Wind speed 💨  
 - Humidity 💧  
 - Weather icons 🌈  
@@ -15,7 +15,7 @@ All powered by the OpenWeather API and deployed with Netlify Functions.
 ## 🚀 Features
 
 - Current weather info by city or geolocation  
-- Detailed 7-day weather forecast  
+- Detailed 4-day weather forecast  
 - Easy-to-read icons and data  
 - Responsive and user-friendly interface  
 
