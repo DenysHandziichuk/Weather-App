@@ -5,7 +5,7 @@ A simple and beautiful weather app that shows:
 ## 🌐 Live Demo
 
 Try the app here:  
-➡️ [Link](https://weather-pagaw1wgc-denys-projects-e0c0a892.vercel.app/)
+➡️ [Link](http://denyshandziichuk.me/Weather-App/)
 
 - 4-day forecast 📅  
 - Wind speed 💨  
