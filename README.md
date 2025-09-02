@@ -2,6 +2,11 @@
 
 A simple and beautiful weather app that shows:
 
+## 🌐 Live Demo
+
+Try the app here:  
+➡️ [Link](http://denyshandziichuk.me/Weather-App/)
+
 - 4-day forecast 📅  
 - Wind speed 💨  
 - Humidity 💧  
@@ -27,9 +32,3 @@ Check out a screenshot of the app in action! 👇
 
 ![Preview](assets/preview.png)
 
----
-
-## 🌐 Live Demo
-
-Try the app here:  
-➡️ [Link](http://denyshandziichuk.me/Weather-App/)
